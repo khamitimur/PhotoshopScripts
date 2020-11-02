@@ -8,7 +8,7 @@ exportOptionsSaveForWeb.transparency = false;
 function main() {
     // Opening App Store icon selection dialog.
     var sourceFile = File.openDialog("Select App Store icon", "*.png", false);
-    if (sourceFile == null)  {
+    if (sourceFile == null) {
         return;
     }
 
@@ -36,7 +36,7 @@ function main() {
     var rootFolder = Folder.selectDialog("Choose an output folder.");
     if (rootFolder == null) {
         restorePreferences();
-        
+
         return;
     }
 
@@ -44,46 +44,46 @@ function main() {
     sourceImage.info = null;
 
     var iPhoneIcons = [
-    // Notification
-    {"name": "AppIcon-20@2x", "size":40},
-    {"name": "AppIcon-20@3x", "size":60},
+        // Notification
+        { "name": "AppIcon-20@2x", "size": 40 },
+        { "name": "AppIcon-20@3x", "size": 60 },
 
-    // Settings
-    {"name": "AppIcon-29@2x", "size":58},
-    {"name": "AppIcon-29@3x", "size":87},
+        // Settings
+        { "name": "AppIcon-29@2x", "size": 58 },
+        { "name": "AppIcon-29@3x", "size": 87 },
 
-    // Spotlight
-    {"name": "AppIcon-40@2x", "size":80},
-    {"name": "AppIcon-40@3x", "size":120},
+        // Spotlight
+        { "name": "AppIcon-40@2x", "size": 80 },
+        { "name": "AppIcon-40@3x", "size": 120 },
 
-    // Application
-    {"name": "AppIcon-60@2x", "size":120},
-    {"name": "AppIcon-60@3x", "size":180},
+        // Application
+        { "name": "AppIcon-60@2x", "size": 120 },
+        { "name": "AppIcon-60@3x", "size": 180 },
     ]
 
     var iPadIcons = [
-    // Notification
-    {"name": "AppIcon-20@1x~ipad", "size":20},
-    {"name": "AppIcon-20@2x~ipad", "size":40},
+        // Notification
+        { "name": "AppIcon-20@1x~ipad", "size": 20 },
+        { "name": "AppIcon-20@2x~ipad", "size": 40 },
 
-    // Settings
-    {"name": "AppIcon-29@1x~ipad", "size":29},
-    {"name": "AppIcon-29@2x~ipad", "size":58},
+        // Settings
+        { "name": "AppIcon-29@1x~ipad", "size": 29 },
+        { "name": "AppIcon-29@2x~ipad", "size": 58 },
 
-    // Spotlight
-    {"name": "AppIcon-40@1x~ipad", "size":40},
-    {"name": "AppIcon-40@2x~ipad", "size":80},
+        // Spotlight
+        { "name": "AppIcon-40@1x~ipad", "size": 40 },
+        { "name": "AppIcon-40@2x~ipad", "size": 80 },
 
-    // Application
-    {"name": "AppIcon-76@1x~ipad", "size":76},
-    {"name": "AppIcon-76@2x~ipad", "size":152},
+        // Application
+        { "name": "AppIcon-76@1x~ipad", "size": 76 },
+        { "name": "AppIcon-76@2x~ipad", "size": 152 },
 
-    // iPad Pro Application
-    {"name": "AppIcon-83.5@2x~ipad", "size":167},
+        // iPad Pro Application
+        { "name": "AppIcon-83.5@2x~ipad", "size": 167 },
     ]
 
     var appStoreIcons = [
-    {"name": "AppIcon-1024@1x~ios-marketing", "size":1024},
+        { "name": "AppIcon-1024@1x~ios-marketing", "size": 1024 },
     ];
 
     // Creating folder.
