@@ -103,8 +103,6 @@ function main() {
 }
 
 function generateIcons(sourceImage, icons, destinationFolder) {
-    var folder = createFolder(destinationFolder, folderName)
-
     for (var i = 0; i < icons.length; i++) {
         generateIcon(sourceImage, icons[i], destinationFolder)
     }
