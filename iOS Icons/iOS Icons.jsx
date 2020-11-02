@@ -86,10 +86,13 @@ function main() {
     {"name": "AppIcon-1024@1x~ios-marketing", "size":1024},
     ];
 
+    // Creating folder.
+    var destinationFolder = createFolder(rootFolder, "Generated Icons")
+
     // Generating and saving icons.
-    generateIcons(sourceImage, iPhoneIcons, rootFolder, "iPhone")
-    generateIcons(sourceImage, iPadIcons, rootFolder, "iPad")
-    generateIcons(sourceImage, appStoreIcons, rootFolder, "AppStore")
+    generateIcons(sourceImage, iPhoneIcons, destinationFolder)
+    generateIcons(sourceImage, iPadIcons, destinationFolder)
+    generateIcons(sourceImage, appStoreIcons, destinationFolder)
 
     alert("Done!");
 
@@ -99,16 +102,16 @@ function main() {
     restorePreferences();
 }
 
-function generateIcons(sourceImage, icons, destinationFolder, folderName) {
+function generateIcons(sourceImage, icons, destinationFolder) {
     var folder = createFolder(destinationFolder, folderName)
 
     for (var i = 0; i < icons.length; i++) {
-        generateIcon(sourceImage, icons[i], folder)
+        generateIcon(sourceImage, icons[i], destinationFolder)
     }
 }
 
-function createFolder(destinationFolder, folderName) {
-    var folder = new Folder(destinationFolder + "/" + folderName)
+function createFolder(rootFolder, folderName) {
+    var folder = new Folder(rootFolder + "/" + folderName)
     if (!folder.exists) {
         folder.create()
     }
